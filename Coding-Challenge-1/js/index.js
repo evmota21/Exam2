@@ -21,7 +21,7 @@ function getMeals(mealQuery){
             results.innerHTML = "";
             errorHandling.innerHTML = "";
             console.log(responseJSON);
-            results.innerHTML = `<div> ${responseJSON} </div>`;
+            results.innerHTML = `<div> Meal id: ${responseJSON.meals[0].idMeal}, Meal Area : ${responseJSON.meals[0].strArea}, instructions : ${responseJSON.meals[0].strInstructions} </div> <img href="${responseJSON.meals[0].strMealThumb}"/>`;
         })
         .catch( err => {
             errorHandling.innerHTML = "Meal not found";
